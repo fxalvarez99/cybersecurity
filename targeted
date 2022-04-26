@@ -1,0 +1,196 @@
+# Nmap 7.92 scan initiated Tue Apr 26 01:11:31 2022 as: nmap -sC -sV -p53,80,443 -oN targeted 192.168.0.1
+Nmap scan report for www.adsl.vf (192.168.0.1)
+Host is up (0.0010s latency).
+
+PORT    STATE SERVICE    VERSION
+53/tcp  open  domain     dnsmasq 2.78
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.78
+80/tcp  open  http?
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     UNKNOWN 400 Bad Request
+|     Server: 
+|     Date: Mon, 25 Apr 2022 23:11:37 GMT
+|     Cache-Control: no-cache,no-store,max-age=0
+|     Prama: no-cache
+|     X-Frame-Options: DENY
+|     Expires: 0
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Content-Security-Policy: default-src 'self' 'unsafe-inline' 'unsafe-eval'
+|     Content-Language: en
+|     Content-Type: text/html
+|     Connection: close
+|     <HTML>
+|     <HEAD><TITLE>400 Bad Request</TITLE></HEAD>
+|     <BODY BGCOLOR="#cc9999" TEXT="#000000" LINK="#2020ff" VLINK="#4040cc">
+|     <H4>400 Bad Request</H4>
+|     Invalid Request
+|   NULL: 
+|     UNKNOWN 408 Request Timeout
+|     Server: 
+|     Date: Mon, 25 Apr 2022 23:11:37 GMT
+|     Cache-Control: no-cache,no-store,max-age=0
+|     Prama: no-cache
+|     X-Frame-Options: DENY
+|     Expires: 0
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Content-Security-Policy: default-src 'self' 'unsafe-inline' 'unsafe-eval'
+|     Content-Language: en
+|     Content-Type: text/html
+|     Connection: close
+|     <HTML>
+|     <HEAD><TITLE>408 Request Timeout</TITLE></HEAD>
+|     <BODY BGCOLOR="#cc9999" TEXT="#000000" LINK="#2020ff" VLINK="#4040cc">
+|     <H4>408 Request Timeout</H4>
+|_    request appeared within a reasonable time period.
+443/tcp open  ssl/https?
+| fingerprint-strings: 
+|   GetRequest: 
+|     UNKNOWN 400 Bad Request
+|     Server: 
+|     Date: Mon, 25 Apr 2022 23:11:42 GMT
+|     Cache-Control: no-cache,no-store,max-age=0
+|     Prama: no-cache
+|     X-Frame-Options: DENY
+|     Expires: 0
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Content-Security-Policy: default-src 'self' 'unsafe-inline' 'unsafe-eval'
+|     Content-Language: en
+|     Content-Type: text/html
+|     Connection: close
+|     <HTML>
+|     <HEAD><TITLE>400 Bad Request</TITLE></HEAD>
+|     <BODY BGCOLOR="#cc9999" TEXT="#000000" LINK="#2020ff" VLINK="#4040cc">
+|     <H4>400 Bad Request</H4>
+|     Invalid Request
+|   HTTPOptions: 
+|     UNKNOWN 400 Bad Request
+|     Server: 
+|     Date: Mon, 25 Apr 2022 23:11:43 GMT
+|     Cache-Control: no-cache,no-store,max-age=0
+|     Prama: no-cache
+|     X-Frame-Options: DENY
+|     Expires: 0
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Content-Security-Policy: default-src 'self' 'unsafe-inline' 'unsafe-eval'
+|     Content-Language: en
+|     Content-Type: text/html
+|     Connection: close
+|     <HTML>
+|     <HEAD><TITLE>400 Bad Request</TITLE></HEAD>
+|     <BODY BGCOLOR="#cc9999" TEXT="#000000" LINK="#2020ff" VLINK="#4040cc">
+|     <H4>400 Bad Request</H4>
+|     Invalid Request
+|   NULL: 
+|     UNKNOWN 408 Request Timeout
+|     Server: 
+|     Date: Mon, 25 Apr 2022 23:11:42 GMT
+|     Cache-Control: no-cache,no-store,max-age=0
+|     Prama: no-cache
+|     X-Frame-Options: DENY
+|     Expires: 0
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Content-Security-Policy: default-src 'self' 'unsafe-inline' 'unsafe-eval'
+|     Content-Language: en
+|     Content-Type: text/html
+|     Connection: close
+|     <HTML>
+|     <HEAD><TITLE>408 Request Timeout</TITLE></HEAD>
+|     <BODY BGCOLOR="#cc9999" TEXT="#000000" LINK="#2020ff" VLINK="#4040cc">
+|     <H4>408 Request Timeout</H4>
+|_    request appeared within a reasonable time period.
+| ssl-cert: Subject: commonName=192.168.0.1/organizationName=Sercomm/stateOrProvinceName=Jiangsu/countryName=CN
+| Not valid before: 2019-04-22T07:43:20
+|_Not valid after:  2029-04-19T07:43:20
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=4/26%Time=62672AA8%P=x86_64-pc-linux-gnu%r(NULL
+SF:,27D,"UNKNOWN\x20408\x20Request\x20Timeout\r\nServer:\x20\r\nDate:\x20M
+SF:on,\x2025\x20Apr\x202022\x2023:11:37\x20GMT\r\nCache-Control:\x20no-cac
+SF:he,no-store,max-age=0\r\nPrama:\x20no-cache\r\nX-Frame-Options:\x20DENY
+SF:\r\nExpires:\x200\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protec
+SF:tion:\x201;\x20mode=block\r\nContent-Security-Policy:\x20default-src\x2
+SF:0'self'\x20'unsafe-inline'\x20'unsafe-eval'\r\nContent-Language:\x20en\
+SF:r\nContent-Type:\x20text/html\r\nConnection:\x20close\r\n\r\n\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20<HTML>\n\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20<HEAD><TITLE>408\x20Request\x20Timeout</TITLE></
+SF:HEAD>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<BODY\x20BGCOLOR
+SF:=\"#cc9999\"\x20TEXT=\"#000000\"\x20LINK=\"#2020ff\"\x20VLINK=\"#4040cc
+SF:\">\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<H4>408\x20Request
+SF:\x20Timeout</H4>\nNo\x20request\x20appeared\x20within\x20a\x20reasonabl
+SF:e\x20time\x20period\.\n")%r(GetRequest,24C,"UNKNOWN\x20400\x20Bad\x20Re
+SF:quest\r\nServer:\x20\r\nDate:\x20Mon,\x2025\x20Apr\x202022\x2023:11:37\
+SF:x20GMT\r\nCache-Control:\x20no-cache,no-store,max-age=0\r\nPrama:\x20no
+SF:-cache\r\nX-Frame-Options:\x20DENY\r\nExpires:\x200\r\nX-Content-Type-O
+SF:ptions:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nContent-
+SF:Security-Policy:\x20default-src\x20'self'\x20'unsafe-inline'\x20'unsafe
+SF:-eval'\r\nContent-Language:\x20en\r\nContent-Type:\x20text/html\r\nConn
+SF:ection:\x20close\r\n\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0<HTML>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<HEAD><TITLE>4
+SF:00\x20Bad\x20Request</TITLE></HEAD>\n\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20<BODY\x20BGCOLOR=\"#cc9999\"\x20TEXT=\"#000000\"\x20LINK=
+SF:\"#2020ff\"\x20VLINK=\"#4040cc\">\n\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20<H4>400\x20Bad\x20Request</H4>\nInvalid\x20Request\n")%r(HT
+SF:TPOptions,24C,"UNKNOWN\x20400\x20Bad\x20Request\r\nServer:\x20\r\nDate:
+SF:\x20Mon,\x2025\x20Apr\x202022\x2023:11:37\x20GMT\r\nCache-Control:\x20n
+SF:o-cache,no-store,max-age=0\r\nPrama:\x20no-cache\r\nX-Frame-Options:\x2
+SF:0DENY\r\nExpires:\x200\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-P
+SF:rotection:\x201;\x20mode=block\r\nContent-Security-Policy:\x20default-s
+SF:rc\x20'self'\x20'unsafe-inline'\x20'unsafe-eval'\r\nContent-Language:\x
+SF:20en\r\nContent-Type:\x20text/html\r\nConnection:\x20close\r\n\r\n\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<HTML>\n\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20<HEAD><TITLE>400\x20Bad\x20Request</TITLE><
+SF:/HEAD>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<BODY\x20BGCOLO
+SF:R=\"#cc9999\"\x20TEXT=\"#000000\"\x20LINK=\"#2020ff\"\x20VLINK=\"#4040c
+SF:c\">\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<H4>400\x20Bad\x2
+SF:0Request</H4>\nInvalid\x20Request\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=4/26%Time=62672AAD%P=x86_64-pc-linux-gnu
+SF:%r(NULL,27D,"UNKNOWN\x20408\x20Request\x20Timeout\r\nServer:\x20\r\nDat
+SF:e:\x20Mon,\x2025\x20Apr\x202022\x2023:11:42\x20GMT\r\nCache-Control:\x2
+SF:0no-cache,no-store,max-age=0\r\nPrama:\x20no-cache\r\nX-Frame-Options:\
+SF:x20DENY\r\nExpires:\x200\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS
+SF:-Protection:\x201;\x20mode=block\r\nContent-Security-Policy:\x20default
+SF:-src\x20'self'\x20'unsafe-inline'\x20'unsafe-eval'\r\nContent-Language:
+SF:\x20en\r\nContent-Type:\x20text/html\r\nConnection:\x20close\r\n\r\n\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<HTML>\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20<HEAD><TITLE>408\x20Request\x20Timeout</T
+SF:ITLE></HEAD>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<BODY\x20
+SF:BGCOLOR=\"#cc9999\"\x20TEXT=\"#000000\"\x20LINK=\"#2020ff\"\x20VLINK=\"
+SF:#4040cc\">\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<H4>408\x20
+SF:Request\x20Timeout</H4>\nNo\x20request\x20appeared\x20within\x20a\x20re
+SF:asonable\x20time\x20period\.\n")%r(GetRequest,24C,"UNKNOWN\x20400\x20Ba
+SF:d\x20Request\r\nServer:\x20\r\nDate:\x20Mon,\x2025\x20Apr\x202022\x2023
+SF::11:42\x20GMT\r\nCache-Control:\x20no-cache,no-store,max-age=0\r\nPrama
+SF::\x20no-cache\r\nX-Frame-Options:\x20DENY\r\nExpires:\x200\r\nX-Content
+SF:-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nC
+SF:ontent-Security-Policy:\x20default-src\x20'self'\x20'unsafe-inline'\x20
+SF:'unsafe-eval'\r\nContent-Language:\x20en\r\nContent-Type:\x20text/html\
+SF:r\nConnection:\x20close\r\n\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20<HTML>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<HEAD><
+SF:TITLE>400\x20Bad\x20Request</TITLE></HEAD>\n\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20<BODY\x20BGCOLOR=\"#cc9999\"\x20TEXT=\"#000000\"\x
+SF:20LINK=\"#2020ff\"\x20VLINK=\"#4040cc\">\n\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20<H4>400\x20Bad\x20Request</H4>\nInvalid\x20Request\n
+SF:")%r(HTTPOptions,24C,"UNKNOWN\x20400\x20Bad\x20Request\r\nServer:\x20\r
+SF:\nDate:\x20Mon,\x2025\x20Apr\x202022\x2023:11:43\x20GMT\r\nCache-Contro
+SF:l:\x20no-cache,no-store,max-age=0\r\nPrama:\x20no-cache\r\nX-Frame-Opti
+SF:ons:\x20DENY\r\nExpires:\x200\r\nX-Content-Type-Options:\x20nosniff\r\n
+SF:X-XSS-Protection:\x201;\x20mode=block\r\nContent-Security-Policy:\x20de
+SF:fault-src\x20'self'\x20'unsafe-inline'\x20'unsafe-eval'\r\nContent-Lang
+SF:uage:\x20en\r\nContent-Type:\x20text/html\r\nConnection:\x20close\r\n\r
+SF:\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<HTML>\n\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20<HEAD><TITLE>400\x20Bad\x20Request</
+SF:TITLE></HEAD>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<BODY\x2
+SF:0BGCOLOR=\"#cc9999\"\x20TEXT=\"#000000\"\x20LINK=\"#2020ff\"\x20VLINK=\
+SF:"#4040cc\">\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<H4>400\x2
+SF:0Bad\x20Request</H4>\nInvalid\x20Request\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Apr 26 01:13:53 2022 -- 1 IP address (1 host up) scanned in 142.25 seconds
